@@ -1,0 +1,76 @@
+.form-container {
+  background: #fff;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #e67e22;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+input, select {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  min-width: 200px;
+}
+
+.orange input::placeholder,
+.orange select {
+  color: #e67e22;
+}
+
+hr {
+  border: 1px dashed #ddd;
+  margin: 25px 0;
+}
+
+.App {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+input, button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+ 
+}
+button{
+ background-color: #e67e22;
+  color: #fff;
+}
+.table-container {
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+
+ 
+}
+
+th {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: left;
+  background-color: #2e2929;
+  color: #fff;
+}

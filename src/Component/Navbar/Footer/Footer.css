@@ -1,0 +1,56 @@
+.footer {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #db773d;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  /* gap: 20px; */
+  flex-wrap: wrap;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  align-items: center;
+  /* margin: 10px; */
+}
+
+.footer-logo {
+  height: 50px;
+}
+
+.footer-center {
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-right a {
+  color: white;
+  font-size: 20px;
+  margin: 0 8px;
+  transition: transform 0.2s;
+}
+
+.footer-right a:hover {
+  transform: scale(1.2);
+}
