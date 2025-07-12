@@ -181,8 +181,8 @@ const DailyLogForm = () => {
         </div>
 
         {/* Submit Button */}
-        <div className="form-row">
-          <button type="submit">Submit Report</button>
+        <div className="btn">
+          <button type="submit" style={{ backgroundColor:"#ed8d3aff", border: "none",height:"30px",borderRadius:"5px"}}>Submit Report</button>
         </div>
       </form>
 

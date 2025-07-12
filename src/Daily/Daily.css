@@ -1,5 +1,5 @@
 .form-container {
-  background: #fff;
+  background: #fbfafa;
   max-width: 900px;
   margin: auto;
   padding: 30px;
@@ -21,7 +21,8 @@ h2 {
   margin-bottom: 15px;
 }
 
-input, select {
+input,
+select {
   flex: 1;
   padding: 10px;
   font-size: 14px;
@@ -36,7 +37,7 @@ input, select {
 }
 
 hr {
-  border: 1px dashed #ddd;
+  border: 1px dashed #eeeeee;
   margin: 25px 0;
 }
 
@@ -46,25 +47,27 @@ hr {
   padding: 20px;
 }
 
-input, button {
+input,
+.btn {
   display: block;
-  margin: 10px 0;
-  padding: 8px;
+  padding: 7px;
   width: 100%;
- 
 }
-button{
- background-color: #e67e22;
-  color: #fff;
+
+.btn {
+  color: #2b1717;
+  width: 150px;
+  margin-left: 370px;
 }
+
 .table-container {
   margin-top: 30px;
+  overflow-x: auto; 
 }
 
 table {
   width: 100%;
-
- 
+  border-collapse: collapse;
 }
 
 th {
@@ -73,4 +76,60 @@ th {
   text-align: left;
   background-color: #2e2929;
   color: #fff;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  input,
+  select {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .btn {
+    margin: 0 auto; 
+    margin-top: 20px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    font-weight: bold;
+    text-align: left;
+  }
 }

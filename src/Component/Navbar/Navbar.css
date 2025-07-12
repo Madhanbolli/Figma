@@ -11,6 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap; 
 }
 
 .logo {
@@ -33,6 +34,7 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .profile-info {
@@ -49,11 +51,13 @@ body {
   gap: 20px;
   background: #fff;
   border-top: 1px solid #ccc;
+  flex-wrap: wrap;
 }
 
 .tabs {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .tab {
@@ -75,4 +79,64 @@ body {
 
 .content {
   padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .main-nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .main-nav span {
+    margin: 5px 8px;
+  }
+
+  .sub-nav {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: flex-start; */
+    gap: 15px;
+    padding: 5px;
+  }
+
+  .profile-info {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+
+  .tabs-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-input {
+    width: 100%;
+  }
+
+  .content {
+    padding: 15px;
+  }
 }
