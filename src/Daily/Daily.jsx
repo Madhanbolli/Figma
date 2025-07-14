@@ -85,29 +85,29 @@ const DailyLogForm = () => {
       <form onSubmit={handleSubmit}>
         {/* Basic Info */}
         <div className="form-row">
-          <input name="siteName" value={formData.siteName} onChange={handleChange} placeholder="Site Name" />
-          <input name="transitionId" value={formData.transitionId} onChange={handleChange} placeholder="Transition ID" />
-          <input name="transitionDate" type="date" value={formData.transitionDate} onChange={handleChange} />
+          <input name="siteName" value={formData.siteName} onChange={handleChange} placeholder="Site Name" required />
+          <input name="transitionId" value={formData.transitionId} onChange={handleChange} placeholder="Transition ID" required />
+          <input name="transitionDate" type="date" value={formData.transitionDate} onChange={handleChange}  required/>
         </div>
 
         <div className="form-row">
-          <select name="equipmentType" value={formData.equipmentType} onChange={handleChange}>
+          <select name="equipmentType" value={formData.equipmentType} onChange={handleChange} required >
             <option>Select Equipment Type</option>
             <option>Excavator</option>
             <option>Truck</option>
             <option>Loader</option>
           </select>
-          <select name="assetCodeName" value={formData.assetCodeName} onChange={handleChange}>
+          <select name="assetCodeName" value={formData.assetCodeName} onChange={handleChange} required >
             <option>Select Asset Name</option>
             <option>EX001</option>
             <option>BD002</option>
           </select>
-          <select name="assetType" value={formData.assetType} onChange={handleChange}>
+          <select name="assetType" value={formData.assetType} onChange={handleChange} required>
             <option>Select Asset Code</option>
             <option>Heavy</option>
             <option>Light</option>
           </select>
-          <select name="subCode" value={formData.subCode} onChange={handleChange}>
+          <select name="subCode" value={formData.subCode} onChange={handleChange} required>
             <option>Select Sub Code</option>
             <option>SC001</option>
             <option>SC002</option>
@@ -117,67 +117,67 @@ const DailyLogForm = () => {
         {/* Meter Readings */}
         <hr />
         <div className="form-row orange">
-          <input name="meter1Start" value={formData.meter1Start} onChange={handleChange} placeholder="1st Km/Hr Meter Start" />
-          <input name="meter1End" value={formData.meter1End} onChange={handleChange} placeholder="End" />
-          <input value={formData.meter1End - formData.meter1Start || ''} readOnly placeholder="Difference" />
+          <input name="meter1Start" value={formData.meter1Start} onChange={handleChange} placeholder="1st Km/Hr Meter Start" required />
+          <input name="meter1End" value={formData.meter1End} onChange={handleChange} placeholder="End" required />
+          <input value={formData.meter1End - formData.meter1Start || ''} readOnly placeholder="Difference" required />
         </div>
 
         <div className="form-row orange">
-          <input name="meter2Start" value={formData.meter2Start} onChange={handleChange} placeholder="2nd Km/Hr Meter Start" />
-          <input name="meter2End" value={formData.meter2End} onChange={handleChange} placeholder="End" />
-          <input value={formData.meter2End - formData.meter2Start || ''} readOnly placeholder="Difference" />
+          <input name="meter2Start" value={formData.meter2Start} onChange={handleChange} placeholder="2nd Km/Hr Meter Start" required />
+          <input name="meter2End" value={formData.meter2End} onChange={handleChange} placeholder="End" required/>
+          <input value={formData.meter2End - formData.meter2Start || ''} readOnly placeholder="Difference" required/>
         </div>
 
         {/* Date & Clock */}
         <div className="form-row orange">
-          <input name="dateStart" type="date" value={formData.dateStart} onChange={handleChange} placeholder="Date Start" />
-          <input name="dateEnd" type="date" value={formData.dateEnd} onChange={handleChange} placeholder="Date End" />
+          <input name="dateStart" type="date" value={formData.dateStart} onChange={handleChange} placeholder="Date Start"  required/>
+          <input name="dateEnd" type="date" value={formData.dateEnd} onChange={handleChange} placeholder="Date End" required/>
         </div>
 
         <div className="form-row orange">
-          <input name="clockIn" type="time" value={formData.clockIn} onChange={handleChange} placeholder="In Time" />
-          <input name="clockOut" type="time" value={formData.clockOut} onChange={handleChange} placeholder="Out Time" />
+          <input name="clockIn" type="time" value={formData.clockIn} onChange={handleChange} placeholder="In Time" required/>
+          <input name="clockOut" type="time" value={formData.clockOut} onChange={handleChange} placeholder="Out Time" required />
         </div>
 
         {/* Fuel & Employee */}
         <hr />
         <div className="form-row">
-          <select name="fuelType" value={formData.fuelType} onChange={handleChange}>
+          <select name="fuelType" value={formData.fuelType} onChange={handleChange} required>
             <option>Select Fuel Type</option>
             <option>Diesel</option>
             <option>Petrol</option>
           </select>
-          <input name="issuedOil" value={formData.issuedOil} onChange={handleChange} placeholder="Issued Oil" />
+          <input name="issuedOil" value={formData.issuedOil} onChange={handleChange} placeholder="Issued Oil" required/>
         </div>
 
         <div className="form-row">
-          <select name="debitNote" value={formData.debitNote} onChange={handleChange}>
+          <select name="debitNote" value={formData.debitNote} onChange={handleChange} required >
             <option>Select Yes/No</option>
             <option>Yes</option>
             <option>No</option>
           </select>
-          <select name="employeeType" value={formData.employeeType} onChange={handleChange}>
+          <select name="employeeType" value={formData.employeeType} onChange={handleChange} required >
             <option>Select Employee Type</option>
             <option>Operator</option>
             <option>Helper</option>
           </select>
-          <input name="employeeId" value={formData.employeeId} onChange={handleChange} placeholder="Employee ID" />
+          <input name="employeeId" value={formData.employeeId} onChange={handleChange} placeholder="Employee ID" required />
         </div>
 
         <div className="form-row">
-          <input name="debitReason" value={formData.debitReason} onChange={handleChange} placeholder="Debit Reason" />
-          <input name="debitAmount" value={formData.debitAmount} onChange={handleChange} placeholder="Debit Amount" />
+          <input name="debitReason" value={formData.debitReason} onChange={handleChange} placeholder="Debit Reason" required/>
+          <input name="debitAmount" value={formData.debitAmount} onChange={handleChange} placeholder="Debit Amount" required/>
         </div>
 
         {/* Scope and Remarks */}
         <hr />
         <div className="form-row">
-          <input name="scope" value={formData.scope} onChange={handleChange} placeholder="Scope of Work" />
+          <input name="scope" value={formData.scope} onChange={handleChange} placeholder="Scope of Work" required/>
         </div>
 
         <div className="form-row">
-          <input name="location" value={formData.location} onChange={handleChange} placeholder="Location" />
-          <input name="remarks" value={formData.remarks} onChange={handleChange} placeholder="Remarks" />
+          <input name="location" value={formData.location} onChange={handleChange} placeholder="Location" required/>
+          <input name="remarks" value={formData.remarks} onChange={handleChange} placeholder="Remarks" required/>
         </div>
 
         {/* Submit Button */}

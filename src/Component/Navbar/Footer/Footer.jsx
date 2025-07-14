@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
-import "./Footer.css"; // External CSS file
+import "./Footer.css";
 
 export default function Footer() {
   return (
@@ -10,7 +10,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-center">
-        <p>©companyname2024 @All rights reserved</p>
+        <p>Rcon2025@All rights reserved</p>
         <div className="footer-links">
           <a href="/terms">Terms of Use</a>
           <span>|</span>
